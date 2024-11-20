@@ -15,7 +15,8 @@ function App() {
 
   useEffect(() => {
     // Step 1: Hardcoded backend URL (initially for local development)
-    const backendURL = 'http://localhost:4000'; // Hardcoded for initial local setup
+    const backendURL = process.env.REACT_APP_BACKEND_URL; // Hardcoded for initial local setup
+    console.log(process.env.REACT_APP_BACKEND_URL)
     const endpoint = '/message';
     const fullURL = `${backendURL}${endpoint}`;
 
